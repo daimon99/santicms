@@ -97,6 +97,6 @@ def get_blogs_recommended(page=1):
                   author=a['author__username'],
                   atag=a['atag__name'],
                   create_time=a['create_time'],
-                  favorites=a['articlestatistic__subscribe'],
+                  favorites=a['articlestatistic__subscribe'] if a['articlestatistic__subscribe'] else 0,
                   ) for a in articles]
     return blogs
