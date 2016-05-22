@@ -1,0 +1,34 @@
+{% extends 'mycms/base.html' %}
+
+{% block content %}
+
+    <div>
+        <ul>
+            <li>推荐的</li>
+            <li>全部的</li>
+            <li>热门的</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            {% for i in blogs %}
+                <li>
+                    <div>
+                        {{ i.rating }}推荐
+                        {{ i.reading }}浏览
+                    </div>
+
+                    <h2>{{ i.title }}</h2>
+                    <p>{{ i.content_short }}</p>
+                    <foot>
+                        {{ i.author }}发布于 {{ i.atag }} {{ i.create_time }}
+                        {{ i.favorites }}
+                    </foot>
+                </li>
+            {% empty %}
+                <li>还没有文章</li>
+            {% endfor %}
+
+        </ul>
+    </div>
+{% endblock %}
