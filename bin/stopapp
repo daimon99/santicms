@@ -1,0 +1,2 @@
+ps -elf | grep santiadmin | grep poll | awk '{print $4}' | xargs -L 1 kill -15 2>&1 
+exit 0
