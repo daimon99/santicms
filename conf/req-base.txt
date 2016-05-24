@@ -1,0 +1,5 @@
+--index http://pypi.douban.com/simple/
+--trusted-host pypi.douban.com
+
+Django==1.9.6
+wheel==0.24.0

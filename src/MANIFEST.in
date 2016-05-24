@@ -1,0 +1,3 @@
+recursive-include templates *.*
+include manage.py
+include README.md
